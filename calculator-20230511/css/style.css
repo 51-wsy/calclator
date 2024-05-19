@@ -1,0 +1,146 @@
+/* 
+使用W3C字体优化
+*/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li { list-style: none; }
+
+html, body {
+  background-color: #f1f1f1;
+}
+
+/* 页面容器 */
+.page-wrapper {
+  margin: 0 10vw;
+  box-shadow: 0 0 14px 2px rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+
+/* 头部 */
+.header {
+  height: 42px;
+  line-height: 42px;
+  background-color: #fff;
+  text-align: end;
+}
+.header-title {
+  text-align: center;
+}
+
+/* 计算器容器 */
+.calc-container {
+  float: left;
+  width: 50%;
+}
+/* 计算区域 */
+.calc-area {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.calc-area .calc-line {
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  color: #5c5c5c;
+  text-align: right;
+}
+.calc-area .current-number {
+  height: 64px;
+  line-height: 64px;
+  font-size: 38px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* 键盘区域 */
+.keyboard {
+  margin: 16px 10px 16px;
+}
+/* .keyboard:first-child {
+  border-top: 1px solid #e6e6e6;
+} */
+.key-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.key-row .keycode {
+  height: 10vh;
+  width: 25vw;
+  line-height: 10vh;
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5%;
+}
+.key-row .keycode.orange{
+  background-color: #ff6700;
+  color: #fff;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* 禁用点击状态，不能触发鼠标事件 */
+}
+
+.unfinished{
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* 禁用点击状态，不能触发鼠标事件 */
+}
+
+/* 历史记录区域*/
+.history-container {
+  float: left;
+  width: 50%;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+}
+.history-container .title {
+  font-size: 22px;
+  line-height: 44px;
+  border-bottom: 1px solid #dedede;
+}
+.history-container .history-item {
+  height: 80px;
+  line-height: 40px;
+  font-size: 26px;
+  border-bottom: 1px solid #dedede;
+  text-align: right;
+  overflow-x: auto;
+}
+.history-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.keycode:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.hover{
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.history-container .history-item p{
+  font-size: 20px;
+  color: #5c5c5c;
+}
+
+.historyList {
+  height: 80vh;
+  overflow-y: auto;
+}

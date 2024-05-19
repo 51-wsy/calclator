@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>简易计算器</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="calc-container">
+      <!-- 头部区域 -->
+      <div class="header">
+          <h1 class="header-title">简易计算器</h1>
+      </div>
+
+      <!-- 计算区域 -->
+      <div class="calc-area">
+        <!-- 运算显示容器 -->
+        <div class="calc-line"></div>
+        <!-- 当前数字显示容器 -->
+        <div class="current-number">0</div>
+      </div>
+
+      <!-- 键盘区域 -->
+      <div class="keyboard-container" id="actionDiv">
+        <ul class="keyboard">
+          <li class="key-row">
+            <div class="keycode non-numeric unfinished" data-action="point">%</div>
+            <div class="keycode non-numeric unfinished" data-action="squareRoot">√</div>
+            <div class="keycode non-numeric unfinished" data-action="square">x²</div>
+            <div class="keycode non-numeric unfinished" data-action="reciprocal">1/x</div>
+          </li>
+          <li class="key-row">
+            <div class="keycode keyDelete" data-action="clearError">CE</div>
+            <div class="keycode keyEscape" data-action="clear">C</div>
+            <div class="keycode keyBackspace"  style="display: flex;justify-content:center;align-items:center" data-action="backspace">
+              <image src="image/back.png" style="width: 30px;" data-action="backspace"></image>
+            </div>
+            <div class="keycode non-numeric orange" data-action="divide">÷</div>
+          </li>
+          <li class="key-row">
+            <div class="keycode number key7" data-action="7">7</div>
+            <div class="keycode number key8" data-action="8">8</div>
+            <div class="keycode number key9" data-action="9">9</div>
+            <div class="keycode non-numeric orange" data-action="multiplication">×</div>
+          </li>
+          <li class="key-row">
+            <div class="keycode number key4" data-action="4">4</div>
+            <div class="keycode number key5" data-action="5">5</div>
+            <div class="keycode number key6" data-action="6">6</div>
+            <div class="keycode non-numeric orange" data-action="subtraction">-</div>
+          </li>
+          <li class="key-row">
+            <div class="keycode number key1" data-action="1">1</div>
+            <div class="keycode number key2" data-action="2">2</div>
+            <div class="keycode number key3" data-action="3">3</div>
+            <div class="keycode non-numeric orange" data-action="addition">+</div>
+          </li>
+          <li class="key-row">
+            <div class="keycode non-numeric" data-action="minusSign">±</div>
+            <div class="keycode number key0" data-action="0">0</div>
+            <div class="keycode non-numeric key." data-action="dot">·</div>
+            <div class="keycode non-numeric orange" data-action="equal">=</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 历史记录 -->
+    <div class="history-container">
+      <div class="title">历史记录</div>
+      <image class="clearLocal" src="image/clear.png"></image>
+      <div class="historyList">
+        <ul id="historyWrapper">
+          <li class="history-item"></li>
+        </ul>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+  <script src="js/myjquery.js"></script>
+  <script src="js/decimal.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
